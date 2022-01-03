@@ -1,4 +1,6 @@
 //@ https://medium.com/flutter-community/dart-generics-4a980f44186e
+// ignore_for_file: avoid_print
+
 import 'dart:collection';
 
 //# E: E is used to represent the element type in a collection like List.

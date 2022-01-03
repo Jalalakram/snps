@@ -53,14 +53,14 @@ class Piet extends StatelessWidget {
       child: LayoutGrid(
         columnGap: 12,
         rowGap: 12,
-        templateColumnSizes: [
+        columnSizes: const [
           FlexibleTrackSize(1),
           FlexibleTrackSize(3.5),
           FlexibleTrackSize(1.3),
           FlexibleTrackSize(1.3),
           FlexibleTrackSize(1.3),
         ],
-        templateRowSizes: [
+        rowSizes: const [
           FlexibleTrackSize(1),
           FlexibleTrackSize(0.3),
           FlexibleTrackSize(1.5),

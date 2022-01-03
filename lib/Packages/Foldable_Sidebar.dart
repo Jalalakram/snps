@@ -1,4 +1,7 @@
 //@ https://www.youtube.com/watch?v=XBwB5BGBD8Y
+
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:foldable_sidebar/foldable_sidebar.dart';
 
@@ -45,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.deepOrange,
-            child: Icon(Icons.menu,color: Colors.white,),
+            child: const Icon(Icons.menu,color: Colors.white,),
             onPressed: () {
               setState(() {
                 drawerStatus = drawerStatus == FSBStatus.FSB_OPEN ? FSBStatus.FSB_CLOSE : FSBStatus.FSB_OPEN;
@@ -61,7 +64,7 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black.withAlpha(200),
-      child: Center(child: Text("Click on FAB to Open Drawer",style: TextStyle(fontSize: 20,color: Colors.white),),),
+      child: const Center(child: Text("Click on FAB to Open Drawer",style: TextStyle(fontSize: 20,color: Colors.white),),),
     );
   }
 }
@@ -88,7 +91,7 @@ class CustomDrawer extends StatelessWidget {
               color: Colors.grey.withAlpha(20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: const <Widget>[
                   Icon(Icons.settings, size: 100,),
                   SizedBox(
                     height: 10,
@@ -100,12 +103,12 @@ class CustomDrawer extends StatelessWidget {
             onTap: (){
               debugPrint("Tapped Profile");
             },
-            leading: Icon(Icons.person),
-            title: Text(
+            leading: const Icon(Icons.person),
+            title: const Text(
               "Your Profile",
             ),
           ),
-          Divider(
+          const Divider(
             height: 1,
             color: Colors.grey,
           ),
@@ -113,10 +116,10 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped settings");
             },
-            leading: Icon(Icons.settings),
-            title: Text("Settings"),
+            leading: const Icon(Icons.settings),
+            title: const Text("Settings"),
           ),
-          Divider(
+          const Divider(
             height: 1,
             color: Colors.grey,
           ),
@@ -124,10 +127,10 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped Payments");
             },
-            leading: Icon(Icons.payment),
-            title: Text("Payments"),
+            leading: const Icon(Icons.payment),
+            title: const Text("Payments"),
           ),
-          Divider(
+          const Divider(
             height: 1,
             color: Colors.grey,
           ),
@@ -135,10 +138,10 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped Notifications");
             },
-            leading: Icon(Icons.notifications),
-            title: Text("Notifications"),
+            leading: const Icon(Icons.notifications),
+            title: const Text("Notifications"),
           ),
-          Divider(
+          const Divider(
             height: 1,
             color: Colors.grey,
           ),
@@ -146,8 +149,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               debugPrint("Tapped Log Out");
             },
-            leading: Icon(Icons.exit_to_app),
-            title: Text("Log Out"),
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text("Log Out"),
           ),
         ],
       ),

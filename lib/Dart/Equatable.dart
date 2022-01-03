@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:equatable/equatable.dart';
 
 //# Simplify Equality Comparisons
@@ -9,9 +11,9 @@ import 'package:equatable/equatable.dart';
 
 void equatable() {
   // Extending Equatable
-  final credentialsA = Credentials(username: 'Joe', password: 'password123');
-  final credentialsB = Credentials(username: 'Bob', password: 'password!');
-  final credentialsC = Credentials(username: 'Bob', password: 'password!');
+  const credentialsA = Credentials(username: 'Joe', password: 'password123');
+  const credentialsB = Credentials(username: 'Bob', password: 'password!');
+  const credentialsC = Credentials(username: 'Bob', password: 'password!');
 
   print(credentialsA == credentialsA); // true
   print(credentialsB == credentialsB); // true

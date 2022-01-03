@@ -1,4 +1,6 @@
 //@ https://medium.com/@jelenaaa.lecic/when-to-use-async-await-then-and-future-in-dart-5e00e64ab9b1
+// ignore_for_file: avoid_print
+
 void futures() {
   // print('-- BASIC --');    basicExample(); 
   // print('-- AWAIT ---');   futureExample(); 
@@ -28,7 +30,7 @@ void futureExample() {
 
 Future<void> proceedFuture() {
   print('Future Just Started...');
-  return Future.delayed(Duration(seconds: 5), () => print('Future Responded After 5 Sec.'));
+  return Future.delayed(const Duration(seconds: 5), () => print('Future Responded After 5 Sec.'));
 }
 
 //--------------------------- AWAIT ----------------------------
@@ -39,7 +41,7 @@ void awaitExample() async {
 }
 Future<String> proceedAwait() {
   print('Await Just Started...');
-  return Future.delayed(Duration(seconds: 5), () => "Await Responded After 5 Sec.");
+  return Future.delayed(const Duration(seconds: 5), () => "Await Responded After 5 Sec.");
 }
 
 //--------------------------- THEN -----------------------------
@@ -50,7 +52,7 @@ void thenExample() async {
 }
 Future<String> proceedThen() {
   print('Then Just Started...');
-  return Future.delayed(Duration(seconds: 5), () => "Then Responded After 5 Sec at Last");
+  return Future.delayed(const Duration(seconds: 5), () => "Then Responded After 5 Sec at Last");
 }
 
 //--------------------------- ERROR ----------------------------
@@ -66,5 +68,5 @@ void errorExample() async {
 }
 Future<String> proceedError() {
   print('Error Just Started...');
-  return Future.delayed(Duration(seconds: 5), () => throw "Happened an Error.");
+  return Future.delayed(const Duration(seconds: 5), () => throw "Happened an Error.");
 }

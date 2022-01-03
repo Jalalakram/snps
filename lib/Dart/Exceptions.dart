@@ -6,6 +6,8 @@
 //# 4. Finally Clause
 //# 5. Create our own Custom Exception
 
+// ignore_for_file: avoid_print
+
 void exceptions() {
 
 	print("------------------- CASE 1 ---------------------");

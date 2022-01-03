@@ -74,7 +74,7 @@ class PersonCard extends StatelessWidget {
                     ),
                     Text(
                       "$counter",
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                     IconButton(
                       icon: Icon(Icons.skip_next),

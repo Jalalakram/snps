@@ -1,4 +1,6 @@
 //@ https://medium.com/flutterpub/statefulwidgets-key-state-8ad83ac2e54f
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 void keyState() => runApp(Zero());
@@ -47,6 +49,7 @@ class _FirstPageState extends State<FirstPage> {
   }
   int _counter = 0;
 
+  @override
   void initState() {
     print(">>>>>>>>   _FirstPageState initState() called.");
     super.initState();
@@ -108,7 +111,7 @@ class _SecondPageState extends State<_SecondPage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
@@ -205,7 +208,7 @@ class _ThirdPageState extends State<_ThirdPage> {
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),

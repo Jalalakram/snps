@@ -1,7 +1,9 @@
 /// Get_It package - Dependency Injection with Service Locator Pattern in Flutter & Dart
 /// https://www.youtube.com/watch?v=DbV5RV2HRUk
 /// https://github.dev/md-weber/get_it_tutorial
-/// 
+
+//! require explain get_it, has redundent hhtp and pojo object etc., need improve
+
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -57,7 +59,8 @@ class MyApp extends StatelessWidget {
 
 class MemeRepo {
   Future<Meme> getMeme() async {
-    http.Response response = await http.get("https://some-random-api.ml/meme");
+    http.Response response = await http.get(Uri.parse('https://some-random-api.ml/meme'));
+    
     Map<String, dynamic> singleMemeJson = jsonDecode(response.body);
     return Meme.fromJson(singleMemeJson);
   }

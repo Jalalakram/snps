@@ -1,5 +1,7 @@
 //@ https://medium.com/better-programming/create-a-cross-platform-tabbed-app-in-flutter-c728ca5e30f6
 
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 void bottomNavigationBar() => runApp(MyApp());
@@ -10,12 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tabbed App',
       theme: ThemeData(primarySwatch: Colors.green,),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -64,7 +68,7 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( appBar: AppBar( title: Text('Home'),),);
+    return Scaffold( appBar: AppBar( title: const Text('Home'),),);
   }
 }
 
@@ -76,7 +80,7 @@ class ProfileWidget extends StatefulWidget {
 class _ProfileWidgetState extends State<ProfileWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( appBar: AppBar( title: Text('Profile'),),);
+    return Scaffold( appBar: AppBar( title: const Text('Profile'),),);
   }
 }
 
@@ -88,6 +92,6 @@ class SearchWidget extends StatefulWidget {
 class _SearchWidgetState extends State<SearchWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( appBar: AppBar( title: Text('Search'),),);
+    return Scaffold( appBar: AppBar( title: const Text('Search'),),);
   }
 }

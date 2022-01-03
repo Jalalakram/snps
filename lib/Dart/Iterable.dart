@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, unused_local_variable
+
 import 'dart:math' as Math;
 
 //--------------------- Iterables Collection -----------------------
@@ -14,6 +16,11 @@ final aMap = {'one': 1, 'two': 2, 'three': 3}; //# Inferred as Map
 
   var numbers = Iterable.generate(10, (i) => i+1-1);
   
+  // Preffered way, avoid below
+  for (var n in numbers) {
+    print(n);
+  }
+  // Avoid using `forEach` with a function literal.
   numbers.forEach((n) => print(n));
 
   // for (var n in numbers) { print(n); }

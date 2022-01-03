@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 void generators() {
   print('-- Sync Generator --');        syncGenerator(); 
   // print('-- Async Generator --');       asyncGenerator();
@@ -29,7 +31,9 @@ Iterable<int> createSyncGenerator(int n) sync* {
   print('Generator Started...');
   int k = 0;
   print('Yielding...');
-  while (k < n) yield k++;
+  while (k < n) {
+    yield k++;
+  }
   print('Stoping...');
 }
 //------------------------ Async Generator -----------------------
@@ -53,6 +57,8 @@ Stream<int> createAsyncGenerator(int n) async* {
   print('Generator Started...');
   int k = 0;
   print('Yielding...');
-  while (k < n) yield k++;
+  while (k < n) {
+    yield k++;
+  }
   print('Stoping...');
 }

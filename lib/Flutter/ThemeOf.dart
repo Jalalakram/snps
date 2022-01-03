@@ -48,15 +48,15 @@ class ThemeTest extends StatelessWidget {
       children: <Widget>[
         Text(
           "Title",
-          style: Theme.of(context).textTheme.title,
+          style: Theme.of(context).textTheme.headline6,
         ),
         Text(
           "Headline",
-          style: Theme.of(context).textTheme.headline,
+          style: Theme.of(context).textTheme.headline1,
         ),
         Text(
           "Subhead",
-          style: Theme.of(context).textTheme.subhead,
+          style: Theme.of(context).textTheme.subtitle1,
         ),
         Text(
           "Button",
@@ -68,11 +68,11 @@ class ThemeTest extends StatelessWidget {
         ),
         Text(
           "Body1",
-          style: Theme.of(context).textTheme.body1,
+          style: Theme.of(context).textTheme.bodyText2,
         ),
         Text(
           "Body2",
-          style: Theme.of(context).textTheme.body2,
+          style: Theme.of(context).textTheme.bodyText1,
         ),
       ],
     );
@@ -86,7 +86,7 @@ var lightTheme = ThemeData(
   brightness: Brightness.light,
   backgroundColor: const Color(0xFFE5E5E5),
   accentColor: Colors.black,
-  accentIconTheme: IconThemeData(color: Colors.white),
+  accentIconTheme: const IconThemeData(color: Colors.white),
   dividerColor: Colors.white54,
 );
 
@@ -97,20 +97,20 @@ var darkTheme = ThemeData(
   brightness: Brightness.dark,
   backgroundColor: const Color(0xFF212121),
   accentColor: Colors.white,
-  accentIconTheme: IconThemeData(color: Colors.black),
+  accentIconTheme: const IconThemeData(color: Colors.black),
   dividerColor: Colors.black12,
 );
 
-var lightTextTheme = TextTheme(
-  title: TextStyle(fontSize: 30, color: Colors.green),
-  body1: TextStyle(fontSize: 30, color: Colors.green),
-  headline: TextStyle(fontSize: 30, color: Colors.green),
-  subhead: TextStyle(fontSize: 30, color: Colors.indigoAccent),
+var lightTextTheme = const TextTheme(
+  subtitle1: TextStyle(fontSize: 30, color: Colors.green),
+  bodyText1: TextStyle(fontSize: 30, color: Colors.green),
+  headline1: TextStyle(fontSize: 30, color: Colors.green),
+  headline2: TextStyle(fontSize: 30, color: Colors.indigoAccent),
 );
 
-var darkTextTheme = TextTheme(
-  title: TextStyle(fontSize: 30, color: Colors.grey),
-  body1: TextStyle(fontSize: 30, color: Colors.grey),
-  headline: TextStyle(fontSize: 30, color: Colors.grey),
-  subhead: TextStyle(fontSize: 30, color: Colors.yellow),
+var darkTextTheme = const TextTheme(
+  subtitle1: TextStyle(fontSize: 30, color: Colors.grey),
+  bodyText1: TextStyle(fontSize: 30, color: Colors.grey),
+  headline1: TextStyle(fontSize: 30, color: Colors.grey),
+  headline2: TextStyle(fontSize: 30, color: Colors.yellow),
 );
