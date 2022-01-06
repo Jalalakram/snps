@@ -31,9 +31,9 @@ class PersonCard extends StatelessWidget {
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
+              children: const <Widget>[
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: Text(
                     "Luke Skywalker",
                     style:
@@ -41,7 +41,7 @@ class PersonCard extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0),
                   child: Text(
                     "Age:  23",
                     style:
@@ -50,7 +50,7 @@ class PersonCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             Center(
               child: Container(
                 height: 130.0,
@@ -58,14 +58,14 @@ class PersonCard extends StatelessWidget {
                 child: Image.asset("assets/skywalker.png"),
               ),
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             StatefulBuilder(
               builder: (BuildContext context, StateSetter setState) {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     IconButton(
-                      icon: Icon(Icons.skip_previous),
+                      icon: const Icon(Icons.skip_previous),
                       onPressed: () {
                         setState(() {
                           counter--;
@@ -77,7 +77,7 @@ class PersonCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
                     IconButton(
-                      icon: Icon(Icons.skip_next),
+                      icon: const Icon(Icons.skip_next),
                       onPressed: () {
                         setState(() {
                           counter++;
